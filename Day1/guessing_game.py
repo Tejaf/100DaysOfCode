@@ -1,7 +1,6 @@
 import random
 import emoji
 
-
 def guess_a_number():
 
     print (
