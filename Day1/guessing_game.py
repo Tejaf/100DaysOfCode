@@ -38,4 +38,5 @@ def guess_a_number():
             print("You lost :(")
             print("I was thinking of number " + str(guess) + " " + emoji.emojize(':shit:', use_aliases=True))
 
+
 guess_a_number()
