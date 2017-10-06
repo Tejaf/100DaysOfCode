@@ -23,6 +23,7 @@ while True:
         print("Now you know factorial. Good job!")
         break
 
+
 # using generators
 def fact_using_generator(number):
     count = 1
