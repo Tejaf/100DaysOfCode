@@ -6,14 +6,7 @@ print('''
 
 def count_vowel(string):
     vowel = 'aeiou'
-    vowel_count = map(string.count, vowel)
-    vowel_dict = {}
-    for i, char in enumerate(vowel):
-        vowel_dict[char] = vowel_count[i]
-
-    for k,v in vowel_dict.items():
-        if v == 0:
-            del vowel_dict[k]
+    vowel_dict = {char:string.lower().count(char) for char in vowel}
 
     print "number of vowel in {} is {}".format(string, sum(vowel_dict.values()))
     print vowel_dict
