@@ -8,11 +8,11 @@ def count_vowel(string):
     vowel = 'aeiou'
     vowel_dict = {char:string.lower().count(char) for char in vowel}
 
-    print "number of vowel in {} is {}".format(string, sum(vowel_dict.values()))
-    print vowel_dict
+    print ("number of vowel in {} is {}".format(string, sum(vowel_dict.values())))
+    print (vowel_dict)
 
 
 if __name__ == '__main__':
-    print 'Type a string'
-    input_string = raw_input(">> ")
+    print ('Type a string')
+    input_string = input(">> ")
     count_vowel(input_string)
