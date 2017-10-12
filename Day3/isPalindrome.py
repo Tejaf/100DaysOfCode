@@ -1,4 +1,5 @@
 #! usr/bin/env python
+import sys
 
 def reverse(string):
     return string[::-1]
@@ -17,8 +18,11 @@ def main():
 
     ''')
     while True:
+        if sys.version_info[0] == 2:
+            input = raw_input
+
         print("type any string")
-        string = raw_input('>> ')
+        string = str(input('>> '))
         palindrome = isPalindrome(string)
         if palindrome:
             print ("Yay, {} is a palindrome".format(string))
@@ -26,7 +30,7 @@ def main():
         else:
             print("Aww! {} is not a palindrome".format(string))
             print("try another? y or n")
-            answer = raw_input(">> ")
+            answer = str(input(">> "))
             if answer.lower() in ['yes', 'y', 'yh', 'yes']:
                 continue
             else:
