@@ -1,5 +1,6 @@
 import random
 import emoji
+import sys
 
 def guess_a_number():
 
@@ -16,6 +17,10 @@ def guess_a_number():
     life = 5
 
     while life > 0 :
+
+        if sys.version_info[0] == 2:
+            input = raw_input
+
         print ("I'm thinking of number between 1 and 15. Guess the number")
         guess = random.randint(1, 30)
         try:
