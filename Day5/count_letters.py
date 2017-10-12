@@ -11,7 +11,7 @@ def count_letters(filename):
     with open(filename) as f:
         file_content =  f.read().lower()
         letter_count = {letter:file_content.count(letter) for letter in alphabeths}
-        print letter_count
+        print (letter_count)
 
 
 if __name__ == '__main__':
