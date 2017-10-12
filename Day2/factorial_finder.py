@@ -1,3 +1,5 @@
+import sys
+
 def factorial(n):
     if n <= 1:
         return 1
@@ -11,12 +13,15 @@ print('''
     ''')
 
 while True:
+    if sys.version_info[0] == 2:
+        input = raw_input
+
     print('Type a positive number')
     number = int(input('>> '))
     answer = factorial(number)
     print('The factorial of {} is {}'.format(number, answer))
     print ("try again? y or n ")
-    reply = raw_input('>> ')
+    reply = str(input('>> '))
     if reply.lower() in ['yes', 'y', 'yeah', 'yup']:
         continue
     else:
