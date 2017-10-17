@@ -16,5 +16,5 @@ arr = ['a1','a6','a3','b1', 'c3', 'b2', 'a9','a11','a13']
 # aa = [1,2,7,2,3,8,9,4,5]
 arr.sort(key= lambda a: natural_sort(str(a)))
 
-print (aa) # ['a1', 'a3', 'a6', 'a9', 'a11', 'a13', 'b1', 'b2', 'c3']
+print (arr) # ['a1', 'a3', 'a6', 'a9', 'a11', 'a13', 'b1', 'b2', 'c3']
 
