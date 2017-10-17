@@ -15,4 +15,14 @@ def insertion_sort(itemss):
         return ''.join(items)
     return items
 
+def bubble_sort(arr):
+    n = len(arr)
+    while n > 0:
+        for i in range(n-1):
+            if arr[i] > arr[i+1]:
+                arr[i], arr[i+1] = arr[i+1], arr[i]
+        n -= 1
+
+
+
 print (insertion_sort("bailey"))
