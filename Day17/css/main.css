@@ -1,0 +1,41 @@
+body,
+html {
+    height: 100vh;
+    width: 100%;
+
+}
+body {
+    font-family: "Comic Sans MS", sans-serif;
+    color: #444;
+    font-size: 40px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+    margin-top: 40px;
+    color: fff;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+input {
+    color: #444;
+    font-size: 40px;
+    width: 15%;
+    text-align: center;
+    outline: none;
+}
+
+.result {
+    margin-top: 40px;
+    color: darkslateblue;
+}
+
+#unit {
+    color: #D33257;
+}
