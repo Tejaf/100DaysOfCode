@@ -1,22 +1,21 @@
-function fitAnswerToScreen (answer) {
-    var ansText = answer.innerHTML;
-    const answerFontSize = 60;
-    if (ansText.length > 10 && ansText.length <= 30) {
-        var newFont = String((answerFontSize * 10) / ansText.length + 'px');
-        answer.style.fontSize = newFont ;
-    } else  if (ansText.length > 30) {
-        answer.style.fontSize = '23px' ;
+function fitAnswerToScreen (input) {
+    let inputText = input.innerHTML;
+    const inputFontSize = 60;
+    if (inputText.length > 10 && inputText.length <= 30) {
+        let newFont = String((inputFontSize * 10) / inputText.length + 'px');
+        input.style.fontSize = newFont ;
+    } else  if (inputText.length > 30) {
+        input.style.fontSize = '23px' ;
     } else  {
-        answer.style.fontSize = answerFontSize;
+        input.style.fontSize = inputFontSize;
     }
 }
 
 
-var keys = document.querySelectorAll('#calculator button');
-var answer = document.getElementById('answer');
-var operators = ['+', '-', 'x', '÷', '%'];
-var decimalAdded = false;
-var evalClicked = false;
+const keys = document.querySelectorAll('#calculator button');
+const operators = ['+', '-', 'x', '÷', '%'];
+let decimalAdded = false;
+let evalClicked = false;
 
 
 
@@ -24,14 +23,13 @@ for(var i = 0; i < keys.length; i++) {
     keys[i].onclick = function(e) {
 
         // Get the input and button values
-        var input = document.querySelector('#answer');
-        var inputVal = input.innerHTML;
-        var btnVal = this.innerHTML;
+        let input = document.querySelector('#answer');
+        let inputVal = input.innerHTML;
+        let btnVal = this.innerHTML;
 
         fitAnswerToScreen(input);
 
         if (operators.indexOf(btnVal) === -1 && btnVal !== 'AC' && inputVal === '0') {
-            console.log('hi');
             input.innerHTML = btnVal;
 
         } else if(btnVal === 'AC') {
@@ -40,7 +38,7 @@ for(var i = 0; i < keys.length; i++) {
         }
 
         else if(btnVal === '=') {
-            var equation = inputVal;
+            let equation = inputVal;
             let lastChar = equation[equation.length - 1];
 
             equation = equation.replace(/x/g, '*').replace(/÷/g, '/');
@@ -105,3 +103,4 @@ for(var i = 0; i < keys.length; i++) {
         e.preventDefault();
     }
 }
+
