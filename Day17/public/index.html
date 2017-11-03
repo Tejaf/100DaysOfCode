@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-$END$
+    <h1>Temperature Converter</h1>
+
+    <div class="container">
+        <input id="input" type="text"  placeholder="0"/>
+        <select id="unit">
+            <option value="°C">˚C</option>
+            <option value="°F">˚F</option>
+        </select>
+        <button id="convert">convert</button>
+        <div class="result" id="result">
+        </div>
+    </div>
+
+
+    <script src="js/main.js">
+    </script>
+
 </body>
 </html>
