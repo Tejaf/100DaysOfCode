@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+
+    <h3>Fahrenheit to Celsius</h3>
+    <div>
+        <input id="input" type="text"/>
+        <select id="unit">
+            <option value="°C">˚C</option>
+            <option value="°F">˚F</option>
+        </select>
+        <button>convert</button>
+        <div class="result" id="result">
+        </div>
+    </div>
+
+
+    <script>
+        let inputValue = document.getElementById("input").value;
+        let inputUnit = document.getElementById(("unit")).value;
+
+        console.log(inputValue, inputUnit)
+    </script>
+
+</body>
+</html>
