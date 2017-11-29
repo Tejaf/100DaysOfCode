@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>Mail chimp</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Let's get in touch!</h1>
+        <form action="">
+            <input type="text" id="to" value="tmafonja1@gmail.com" disabled/> 
+            <input type="text" id="subject" placeholder="Hi Teju!" />
+            <textarea  id="content" cols="40" rows="5" placeholder="I'm writing to.."></textarea>
+            <button id="send_email">Send Email</button>
+            <span id="message"></span>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            var from, to, subject, text;
+            $("#send_email").click(function() {
+                to = $("#to").val();
+                subject = $("#subject").val();
+                text = $("#content").val();
+                $("#message").text("Sending E-mail... Please wait!");
+                $.get("http://localhost:8001/send",
+                {to:to, subject:subject, text:text}, function(data) {
+                    // bugged
+                    if (data == "sent") {
+                        $("#message").empty().html(`
+                            Your Email is sent to ${to}. Thank you for reaching out!
+                        `);
+                    }
+                });
+            })
+        })
+    </script>
+</body>
+</html>
